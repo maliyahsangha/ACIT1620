@@ -42,7 +42,7 @@ body {
 .header {
     background-color: rgb(171, 198, 229);
     color: black;
-    padding: 10px;
+    padding: 25px;
     text-align: center;
     border-bottom-color:#080456;
     border-bottom-width: 5px;
@@ -52,6 +52,7 @@ body {
 .header, h1 {
     font-size: 2.5em;
     margin: 0;
+    padding: 20px;
 }
 
 .navbar {

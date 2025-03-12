@@ -1,0 +1,59 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+body {
+    font-family: sans-serif;
+}
+h1, h2 {
+    color: gray;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+}
+
+p.greentea {
+    color: green;
+}
+
+p.raspberry {
+    color: blue;
+}
+
+p.blueberry {
+    color: purple;
+}
+
+p {
+    color: maroon;
+}
+
+em {
+    font-family: serif;
+}
+
+#unique {
+    font-size: 20px;
+    color: red;
+}
+
+div p {
+    color: purple;
+}
+
+ul > ul > li {
+    color: orange;
+}
+
+h1 + p {
+    color: teal;
+}
+
+input[type="text"] {
+    border: 2px solid blue;
+}
+
+a:hover {
+    color: red;
+}

@@ -1,0 +1,24 @@
+/* Flex-container */
+.flex-container {
+    display: flex; /* Activate the flexbpx */
+    flex-direction: row; /* Items are placed in a row */
+    justify-content: space-around; /* Distribute the items with space around */
+    align-items: center; 
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: #f9f9f9;
+    gap: 20px;
+}
+
+/*flex-items*/
+.flex-item {
+    flex: 1; /* each item grows equally */
+    min-width: 100px; /* minimum width for responsiveness */
+    max-width: 200px; /* maximum width for responsiveness */
+    text-align: center;
+    border: 1px solid #007bff;
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+}

@@ -1,0 +1,277 @@
+/*
+    ** IMPORTANT NOTE **
+
+    Styles do not have to match the provided solution exactly - try to get it as close as possible, paying attention to the requirements noted below.
+*/
+
+
+
+/*
+    Begin by creating five variables representing BCIT's brand colors
+
+    The variables can be named whatever you like, but the values must be:
+        #003c71                     (dark blue)
+        #296cf6                     (blue)
+        rgb(0 37 85 / 0.8)          (transparent blue)
+        #ffffff                     (white)
+        #fff400                     (yellow)
+
+    * NOTE: anywhere a color is required in your rules below, you MUST use the CSS variable - no hard-coded colors are allowed
+*/
+
+@property --dark-blue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #003c71; 
+}
+
+@property --blue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #296cf6;
+}
+
+@property --transparent-blue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(0 37 85 / 0.8);
+}
+
+@property --white {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ffffff;
+}
+
+@property --yellow {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #fff400;
+}
+
+
+
+
+/*
+    HEADER STYLES
+    -------------
+    The header must: 
+        - extend all the way from the left edge of the viewport to the right edge of the viewport
+        - have a white background
+
+    The div with class 'menubar' must:
+        - have a dark blue background
+    
+    The list items inside the div with class 'menubar' must:
+        - have white text
+        - have a dark blue background
+        - have bold font weight
+        - must transition to dark blue text over a yellow background when hovered over
+        (use the transition property like- transition: background-color 500ms linear;)
+
+    All elements inside the div with class 'header' must be stacked horizontally across the page
+
+    The h1 with class logo must be 64px wide and 54px tall 
+
+    The list items inside the div with class 'header' must:
+        - have dark blue text
+        - have bold font weight
+        - have no underline (normally OR when hovered over)(Hint: use the text-decoration and set it to none).
+        - must transition to blue text with a 2px solid yellow bottom border when hovered over
+            * TIP: to avoid the position of the element "jumping" when hovering over, apply a default
+             bottom border of 2px solid transparent
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--white);
+    margin: 0;
+}
+
+
+.menubar {
+    background-color: var(--dark-blue);
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.menubar ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.menubar li {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.menubar li:hover {
+    background-color: var(--yellow);
+    transition: background-color 500ms linear;
+    color: var(--dark-blue);
+}
+
+.header {
+    background-color: var(--white);
+    margin: 0;
+}
+
+.header ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+
+.header a {
+    display: flex;
+    flex-direction: row;
+    color: var(--dark-blue);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    gap: 50px;
+}
+
+.header a:hover {
+    text-decoration: none;
+    transition: border-bottom-color;
+    border-bottom-color: var(--yellow);
+    transition: border-bottom-style;
+    border-bottom-style: solid;
+}
+
+h1.logo {
+    width: 64px;
+    height: 54px;
+    margin-left: 12px;
+}
+
+
+/*
+    BIG INFO STYLES
+    ---------------
+    The section with id 'big-info' must:
+        - be 800px tall
+        - use the bcit-big-info.png image located inside the images folder as its background 
+
+    The div with class 'overlay' must:
+        - be positioned absolutely INSIDE the #big-info section (i.e. any values of top, right, bottom, and left must be relative to the 
+        #big-info element)
+        
+    All elements inside the div with class 'overlay' must: 
+        - have white text
+        - have appropriate font size and weight
+
+    The button element inside the div with class 'overlay' must:
+        - have a 1px solid white border
+        - have appropriate padding on the top, right, bottom, and left sides
+        - transition to a transparent blue background on hover ( transition: background-color 200ms ease-in;)
+*/
+
+#big-info {
+    height: 800px;
+    background-image: url(/ACIT1620_evaluation-1/evaluation-1/evaluation-1/images/bcit-big-info.png);
+} 
+
+.overlay {
+    color: var(--white);
+    position: absolute;
+    left: 90px;
+    top: 550px;
+}
+
+.overlay h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.overlay p {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.overlay button {
+    border: 1px;
+    border-style: solid;
+    border-color: var(--white);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: var(--white);
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.overlay button:hover {
+    transition: background-color 200ms ease-in;
+    background-color: var(--transparent-blue);
+}
+
+
+
+/*
+    WELCOME STYLES
+    --------------
+
+    The h1 inside the section with id 'welcome' must:
+        - have dark blue text
+        - have appropriate font size and weight
+        - be placed sufficiently far enough away from the top and left edges of the section
+
+*/
+
+#welcome {
+    color: var(--dark-blue);
+}
+
+#welcome h1 {
+    color: var(--dark-blue);
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    margin-left: 12px;
+}
+
+/*
+General hint
+Use the selectors appropriately (example: menubar ul, menubar li, menubar li:hover and so on...) 
+*/
+
+header {
+    position: fixed;
+    z-index: 10;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header ul {
+    gap: 30px;
+}
+
+.overlay {
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.menubar li:hover {
+    color: var(--dark-blue);
+    background-color: var(--yellow);
+}
