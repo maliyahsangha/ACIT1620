@@ -51,8 +51,8 @@ let urls = [
 ];
 
 shuffle(urls);
-
 let randomUrls = urls;
+
 
 
 /*
@@ -96,7 +96,6 @@ const images = document.querySelectorAll('.card img');
 */
 
 /*Your code goes here for step 2*/
-
 for (let i = 0; i < images.length; i++) {
     images[i].src = randomUrls[i];
 };
