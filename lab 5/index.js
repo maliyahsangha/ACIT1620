@@ -38,7 +38,7 @@ const shuffle = (list) => {
 
 /*Your code goes here for step 1*/
 
-let urls = [
+urls = [
     'https://i.ibb.co/sjvVrG3/fruit-plyh.jpg',
     'https://i.ibb.co/g3tqj4w/fruit-zxcv.jpg',
     'https://i.ibb.co/88Hy4rD/fruit-wert.jpg',
@@ -51,6 +51,7 @@ let urls = [
 ];
 
 shuffle(urls);
+
 let randomUrls = urls;
 
 
@@ -96,9 +97,13 @@ const images = document.querySelectorAll('.card img');
 */
 
 /*Your code goes here for step 2*/
+
 for (let i = 0; i < images.length; i++) {
     images[i].src = randomUrls[i];
 };
+
+
+
 
 const h1 = document.querySelector('h1');
 h1.append("!")
