@@ -1,0 +1,49 @@
+body {
+    background-color: aliceblue;
+}
+
+h4 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #00205B;
+}
+
+div#flashcard {
+    margin-top: 70px;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-style: solid;
+    border-color: #00843d;
+    padding: 20px;
+    padding-top: 5px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+header {
+    border-color: #00205B;
+    border-style: solid;
+    padding: 40px;
+    background-color: #00843d;
+}
+
+h2#header-text {
+    color: #00205B;
+    text-align: center;
+}
+
+button.saveQuestion {
+    margin: 10px;
+    background-color: transparent;
+}
+
+button.saveAnswer {
+    margin: 10px;
+    background-color: transparent;
+}
+
+button.viewCard {
+    margin: 20px;
+    background-color: transparent;
+}
